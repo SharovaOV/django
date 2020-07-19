@@ -1,6 +1,6 @@
 {% extends 'index.html' %}
-{% block title %}3{% endblock %}
-{% block head_titlle %}{{ film.name }}{% endblock %}
+{% block title %}{{ film.name }}{% endblock %}
+{% block head_titlle %}{{ film.name  }}{% endblock %}
 
 {% block content %}
 
@@ -8,7 +8,7 @@
     <div class="col-sm-5">
       <div class="poster-big">
           <img src="{{ film.poster.url }}">
-          <h2>{{ film.name }}</h2>
+          <!--<h2>{{ film.name }}</h2>-->
       </div>
         <div>{{ film.preview }}</div>
     </div>
