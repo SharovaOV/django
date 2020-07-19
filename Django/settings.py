@@ -25,7 +25,7 @@ SECRET_KEY = 'wo^uj#qsizds59*@)r_6rc(bws0te^hgx_zf2bcxpt1cgq6ipy'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['olgash.pythonanywhere.com' ]
 
 
 # Application definition
