@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+{% block title %}3{% endblock %}
+{% block head_titlle %}{{ var }}{% endblock %}
+
+{% block content %}
+
+  <div class="row">
+    <div class="col-sm-5">
+      <div class="poster-big">
+          <img src="{{ film.poster.url }}">
+          <h2>{{ film.name }}</h2>
+      </div>
+        <div>{{ film.preview }}</div>
+    </div>
+    <div class="col-sm-5"><div>
+      <form action="" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ form_for_feedback.as_p }}
+          <input type="submit" value="Submit">
+      </form>
+    </div>{% for lf in list_feedback %}
+        <div>
+       <div style="background-color: #e3f2fd;">Date: {{ lf.date }}      Nickname:{{ lf.name }}  Rating:{{ lf.rating }}
+            {%  if lf.positiv %} + {% else %}- {% endif %}</div>
+            <div>{{ lf.feedback }}</div></div>
+        {% endfor %}
+    </div>
+
+  </div>
+
+{% endblock %}

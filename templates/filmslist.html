@@ -1,0 +1,10 @@
+{% extends 'index.html' %}
+{% block title %}Список фильмов{% endblock %}
+{% block head_titlle %} Выберите же фильм о котором хотите узнать или высказать свое мнение! {% endblock %}
+{% block content %}
+    <ul class="list-group">
+{% for fl in films %}
+    <li class="list-group-item list-group-item-info"><a href="../film?id={{fl.ID}}/"><div class="poster-little"> <img src="{{ fl.poster.url }}">   {{ fl.name }}</div> </a></li>
+{% endfor %}
+    </ul>
+{% endblock %}

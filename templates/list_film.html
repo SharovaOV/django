@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+{% block title %}List of films{% endblock %}
+{% block head_titlle %} Choose the movie you want to learn about or Express your opinion about!! {% endblock %}
+{% block content %}
+    <ul class="list-group">
+    {% for fl in films %}
+
+        <li class={% if forloop.counter|divisibleby:"2" %}"list-group-item list-group-item-info"
+        {%else%} "list-group-item list-group-item-secondary"{% endif %}>
+            <a href="../film?id={{ fl.id }}">
+            <div class="poster-little "> <img src="{{ fl.poster.url }}">   {{ fl.name }}</div></a></li>
+
+    {% endfor %}
+    </ul>
+{% endblock %}
