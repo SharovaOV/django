@@ -23,4 +23,4 @@ urlpatterns = [
     path('',views.index),
     path('film_list/', views.film_list),
     re_path(r'^film',views.filmId)
-]+static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+]+static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)+static(settings.MODELS_URL, document_root = settings.MEODELS_ROOT)
