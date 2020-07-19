@@ -6,7 +6,7 @@ class model_learn:
     rating=0
     positive=False
     def __init__(self, text_val):
-        mod = './models/'
+        mod = 'static/models/'
         self.model_wordbag= joblib.load(os.path.join(mod,'wordbag.pkl'))
         self.model_rating=joblib.load(os.path.join(mod,'ratingmodel.pkl'))
         self.model_positiv = joblib.load(os.path.join(mod,'positivmodel.pkl'))

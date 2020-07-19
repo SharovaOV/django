@@ -126,4 +126,4 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 MODELS_URL='/models/'
-MODELS_ROOT=os.path.join(BASE_DIR, 'models')
+MODELS_ROOT=os.path.join(BASE_DIR, 'ReitingM/static/models')
