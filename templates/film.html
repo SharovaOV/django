@@ -20,7 +20,7 @@
       </form>
     </div>{% for lf in list_feedback %}
         <div>
-       <div style="background-color: #e3f2fd;">Date: {{ lf.date }}      Nickname:{{ lf.name }}  Rating:{{ lf.rating }}
+       <div style="background-color: #e3f2fd;">Date: {{ lf.date }}     / Nickname:{{ lf.name }} <br> Rating:{{ lf.rating }}/
             {%  if lf.positiv %} + {% else %}- {% endif %}</div>
             <div>{{ lf.feedback }}</div></div>
         {% endfor %}
