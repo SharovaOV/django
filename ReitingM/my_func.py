@@ -13,6 +13,10 @@ class model_learn:
         text_val=self.model_wordbag.transform([text_val])
         self.rating = np.argmax(self.model_rating.predict(text_val))+1
         self.positive = round(self.model_positiv.predict(text_val)[0][0])
+        # устранение несоответствия
+        self.rating=(10-self.rating) if self.positive !=(self.rating>=5) else self.rating
+
+
 
 
 
